@@ -2,7 +2,7 @@ import asyncio
 import requests
 from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
-
+import os
 
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
