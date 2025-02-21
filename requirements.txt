@@ -1,4 +1,2 @@
-asyncio
-requests
 aiogram
-aiogram.enums
+requests
