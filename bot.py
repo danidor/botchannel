@@ -5,6 +5,8 @@ from aiogram.enums import ParseMode
 
 
 
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
 
 
 bot = Bot(token= TELEGRAM_BOT_TOKEN)
