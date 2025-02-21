@@ -33,13 +33,6 @@ async def get_crypto_data():
 
         prices = "\n".join([f"{coin['name']} (${coin['current_price']})" for coin in coins])
 
-            # دریافت قیمت تتر از Nobitex (در تومان) و تبدیل مقدار به عدد
-        #nobitex_url = "https://api.nobitex.ir/market/stats"
-        #nobitex_params = {"srcCurrency": "usdt", "dstCurrency": "rls"}
-        #nobitex_data = requests.get(nobitex_url, params=nobitex_params).json()
-
-        #usdt_to_irt = float(nobitex_data["stats"]["usdt-rls"]["latest"])/10  # ✅ تبدیل مقدار به عدد
-
 
         # ایجاد پیام نهایی
         message = f"""
@@ -54,8 +47,6 @@ async def get_crypto_data():
 💎 **۱۰ ارز دیجیتال برتر**:
 {prices}
 
-#💵 **قیمت تتر (USDT) به تومان**:
-#💲 **{usdt_to_irt:,.0f} تومان** 🇮🇷
 
 📡 **این اطلاعات هر ۵ دقیقه بروزرسانی می‌شود.**
 🔔 *عضو شوید تا اطلاعات لحظه‌ای دریافت کنید!*
