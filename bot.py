@@ -34,11 +34,11 @@ async def get_crypto_data():
         prices = "\n".join([f"{coin['name']} (${coin['current_price']})" for coin in coins])
 
             # دریافت قیمت تتر از Nobitex (در تومان) و تبدیل مقدار به عدد
-        nobitex_url = "https://api.nobitex.ir/market/stats"
-        nobitex_params = {"srcCurrency": "usdt", "dstCurrency": "rls"}
-        nobitex_data = requests.get(nobitex_url, params=nobitex_params).json()
+        #nobitex_url = "https://api.nobitex.ir/market/stats"
+        #nobitex_params = {"srcCurrency": "usdt", "dstCurrency": "rls"}
+        #nobitex_data = requests.get(nobitex_url, params=nobitex_params).json()
 
-        usdt_to_irt = float(nobitex_data["stats"]["usdt-rls"]["latest"])/10  # ✅ تبدیل مقدار به عدد
+        #usdt_to_irt = float(nobitex_data["stats"]["usdt-rls"]["latest"])/10  # ✅ تبدیل مقدار به عدد
 
 
         # ایجاد پیام نهایی
@@ -54,8 +54,8 @@ async def get_crypto_data():
 💎 **۱۰ ارز دیجیتال برتر**:
 {prices}
 
-💵 **قیمت تتر (USDT) به تومان**:
-💲 **{usdt_to_irt:,.0f} تومان** 🇮🇷
+#💵 **قیمت تتر (USDT) به تومان**:
+#💲 **{usdt_to_irt:,.0f} تومان** 🇮🇷
 
 📡 **این اطلاعات هر ۵ دقیقه بروزرسانی می‌شود.**
 🔔 *عضو شوید تا اطلاعات لحظه‌ای دریافت کنید!*
@@ -71,7 +71,7 @@ async def send_crypto_report():
     while True:
         message = await get_crypto_data()
         await bot.send_message(chat_id=CHANNEL_ID, text=message, parse_mode=ParseMode.MARKDOWN)
-        await asyncio.sleep(300)  # Wait for 5 minutes (300 seconds)
+        await asyncio.sleep(30)  # Wait for 5 minutes (300 seconds)
 
 async def main():
     """Start the bot."""
