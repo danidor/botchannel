@@ -5,10 +5,9 @@ from aiogram.enums import ParseMode
 
 
 
-# Configure your bot token and channel ID
-CHANNEL_ID = "@onlineprice724"
 
-bot = Bot(token=TOKEN)
+
+bot = Bot(token= TELEGRAM_BOT_TOKEN)
 dp = Dispatcher()
 
 async def get_crypto_data():
