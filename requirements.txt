@@ -1,4 +1,4 @@
-import asyncio
-import requests
-from aiogram import Bot, Dispatcher
-from aiogram.enums import ParseMode
+asyncio
+requests
+aiogram
+aiogram.enums
