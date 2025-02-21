@@ -6,7 +6,6 @@ from aiogram.enums import ParseMode
 
 
 # Configure your bot token and channel ID
-TELEGRAM_BOT_TOKEN = "7308657177:AAFbZmGjXDUPGYHeiWCO1rfW6VGK0IgYXYE"
 CHANNEL_ID = "@onlineprice724"
 
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
